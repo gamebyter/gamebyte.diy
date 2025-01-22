@@ -99,6 +99,13 @@ export const supportedLanguages = [
       return import('@codemirror/lang-cpp').then((module) => module.cpp());
     },
   }),
+  LanguageDescription.of({
+    name: 'C#',
+    extensions: ['cs'],
+    async load() {
+      return import('@replit/codemirror-lang-csharp').then((module) => module.csharp());
+    },
+  }),
 ];
 
 export async function getLanguage(fileName: string) {
